@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Action types
-const READ = 'spaceTravel/missions/READ';
+const READ = 'football/teams/READ';
 
 let baseURL = 'https://football-apis.herokuapp.com/api/v1/leagues'
 
@@ -21,11 +21,12 @@ const teamsReducer = (state = [], action) => {
   }
 };
 
-export const recieveLeagues = () => async () => {
+export const recieveLeagues = () => async (dispatch) => {
   await axios.get(baseURL)
     .then((response) => {
       let leagues = response.data.leagues;
-      console.log(leagues)
+      // console.log(leagues)
+      dispatch(read(leagues));
     });
 };
 
