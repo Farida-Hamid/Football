@@ -10,11 +10,17 @@ function Leagues () {
   console.log('at teams leagueList =', leagueList);
   console.log('teamsList =', teamsList);
 
+  const chooseLeague = (id) => {
+    console.log('chose', id);
+    teamsList = leagueList.filter((l) => l.id === id)[0];
+    console.log('changed to', teamsList);
+  }
+
   return (
     <section>
       <div className="navigator">
         {leagueList.map((item) => (
-          <button>
+          <button onClick={() => {chooseLeague(item.id)}}>
           <img  src={item.logo} style={ { width: '50px', height: '60px' } } alt="League logo"/>
         </button>
         ))}
