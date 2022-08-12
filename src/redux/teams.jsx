@@ -22,10 +22,11 @@ const teamsReducer = (state = [], action) => {
 };
 
 export const recieveLeagues = () => async (dispatch) => {
+  let leagues;
   await axios.get(baseURL)
     .then((response) => {
-      let leagues = response.data.leagues;
-      // console.log(leagues)
+      leagues = response.data.leagues;
+      console.log(leagues)
       dispatch(read(leagues));
     });
 };

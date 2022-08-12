@@ -1,6 +1,4 @@
 import React from "react";
-import { recieveLeagues } from "../redux/teams";
-import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Team from "./team";
 
@@ -8,12 +6,8 @@ function Leagues () {
   const leagueList = useSelector(state => state);
   let teamsList = [];
   if(leagueList.length !== 0)  teamsList = leagueList[0].teams;
-  const dispatch = useDispatch();
 
-  useEffect(() => async () => {
-    await dispatch(recieveLeagues());
-  }, []);
-  console.log('leagueList =', leagueList);
+  console.log('at teams leagueList =', leagueList);
   console.log('teamsList =', teamsList);
 
   return (
