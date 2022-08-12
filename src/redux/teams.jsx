@@ -26,7 +26,6 @@ export const recieveLeagues = () => async (dispatch) => {
   await axios.get(baseURL)
     .then((response) => {
       leagues = response.data.leagues;
-      console.log(leagues)
       dispatch(read(leagues));
     });
 };

@@ -1,19 +1,18 @@
 import React from "react";
-import { useSelector, useDispatch } from 'react-redux';
+import { useState } from 'react';
 import Team from "./team";
 
-function Leagues () {
-  const leagueList = useSelector(state => state);
-  let teamsList = [];
-  if(leagueList.length !== 0)  teamsList = leagueList[0].teams;
+function Leagues (leagues) {
+  const leagueList = leagues.leagues;
+  const [teams, setTeams] = useState(leagueList.filter((item) => item.id === '423e4faa-4c4b-4cf2-b1e9-03e8e5cace1f'));
 
-  console.log('at teams leagueList =', leagueList);
-  console.log('teamsList =', teamsList);
+  console.log('leagueList =', leagueList);
+  console.log('teamsList =', teams);
 
   const chooseLeague = (id) => {
     console.log('chose', id);
-    teamsList = leagueList.filter((l) => l.id === id)[0];
-    console.log('changed to', teamsList);
+    setTeams(() => leagueList.filter((item) => item.id === id)[0].teams)
+    console.log('changed to', teams);
   }
 
   return (
@@ -27,9 +26,9 @@ function Leagues () {
       </div>
       
       <div>
-        {teamsList.map((team) => (
+        {teams.map((team) => (
           <Team key={team.id} id={team.id} name={team.name} details={team.details}
-        founded={team.founded} logo={team.logo} />
+        founded={team.founded} logo={team.logo} city={team.city} />
         ))}
       </div>
     </section>

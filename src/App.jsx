@@ -17,14 +17,14 @@ function App() {
     // if (leagueList.length < 1){
     // }
 
-    console.log('at app', leagueList);
+    // console.log('at app', leagueList);
 
   return (
     <div>
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Leagues />} />
+          <Route path="/" element={<Leagues leagues={leagueList}/>} />
         </Routes>
       </main>
     </div>
