@@ -25,11 +25,9 @@ function Leagues (leagues) {
         </button>
         ))}
       </div>
-      
       <div>
         {teamsList.map((team) => (
-          <Team key={team.id} id={team.id} name={team.name} details={team.details}
-        founded={team.founded} logo={team.logo} city={team.city} />
+          <Team key={team.id} team={team} />
         ))}
       </div>
     </section>

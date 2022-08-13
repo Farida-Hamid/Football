@@ -4,6 +4,7 @@ import Leagues from './components/leagues';
 import { recieveLeagues } from "./redux/teams";
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import Popup from './components/popup';
 import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       {leagueList.length ? (
         <Routes>
           <Route path="/" element={<Leagues leagues={leagueList}/>} />
+          <Route path="/popup" element={<Popup />} />
         </Routes>
         ) : ''}
       </main>
