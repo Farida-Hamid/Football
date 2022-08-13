@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 function Team ({ team }) {
   return (
@@ -10,19 +10,19 @@ function Team ({ team }) {
   );
 }
 
-Team.propTypes = {
-  team: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    city: PropTypes.string.isRequired,
-    founded: PropTypes.number.isRequired,
-    details: PropTypes.string.isRequired,
-    logo: PropTypes.string.isRequired,
-  }),
-};
+// Team.propTypes = {
+//   team: PropTypes.shape({
+//     id: PropTypes.string.isRequired,
+//     name: PropTypes.string.isRequired,
+//     city: PropTypes.string.isRequired,
+//     founded: PropTypes.number.isRequired,
+//     details: PropTypes.string.isRequired,
+//     logo: PropTypes.string.isRequired,
+//   }),
+// };
 
-Team.defaultProps = {
-  team: {},
-};
+// Team.defaultProps = {
+//   team: {},
+// };
 
 export default Team;
