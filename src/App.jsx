@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
-import Header from "./components/header";
+import Header from './components/header';
 import Leagues from './components/leagues';
-import { recieveLeagues } from "./redux/teams";
+import { recieveLeagues } from './redux/teams';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Popup from './components/popup';
-import "bootstrap/dist/css/bootstrap.css";
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
   const leagueList = useSelector(state => state);
