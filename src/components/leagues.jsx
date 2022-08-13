@@ -7,12 +7,8 @@ function Leagues (leagues) {
   const leagueList = leagues.leagues;
   const [teamsList, setTeamsList] = useState(leagueList.filter((item) => item.id === '423e4faa-4c4b-4cf2-b1e9-03e8e5cace1f')[0].teams);
 
-  console.log('leagueList =', leagueList);
-  console.log('teamsList =', teamsList);
-
   const chooseLeague = (id) => {
     setTeamsList(() => leagueList.filter((item) => item.id === id)[0].teams)
-    console.log('changed to', teamsList);
   }
 
   return (
@@ -26,6 +22,7 @@ function Leagues (leagues) {
         </button>
         ))}
       </div>
+      <p className="identifier">TEAMS</p>
       <div className="teams">
         {teamsList.map((team) => (
           <Team key={team.id} team={team} />
