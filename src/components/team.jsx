@@ -3,7 +3,7 @@ import './style/team.css'
 
 function Team ({ team }) {
   return (
-    <Link className='team' to="/popup" state={{ team }}>
+    <Link className='team' to="/info" state={{ team }}>
       <img  src={team.logo} alt="League logo"/>
       <h2 className='name'>{team.name}</h2>
       <p className='city'>{team.city}</p>
