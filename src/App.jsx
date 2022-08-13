@@ -14,18 +14,15 @@ function App() {
     await dispatch(recieveLeagues());
   }, []);
 
-    // if (leagueList.length < 1){
-    // }
-
-    // console.log('at app', leagueList);
-
   return (
     <div>
       <Header />
       <main>
+      {leagueList.length ? (
         <Routes>
           <Route path="/" element={<Leagues leagues={leagueList}/>} />
         </Routes>
+        ) : ''}
       </main>
     </div>
   );
