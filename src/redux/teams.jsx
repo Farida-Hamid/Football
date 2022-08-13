@@ -3,7 +3,7 @@ import axios from 'axios';
 // Action types
 const READ = 'football/teams/READ';
 
-let baseURL = 'https://football-apis.herokuapp.com/api/v1/leagues'
+const baseURL = 'https://football-apis.herokuapp.com/api/v1/leagues';
 
 // Action creators
 export const read = (teams) => ({

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from 'react-router-dom';
 import MicIcon from '@mui/icons-material/Mic';
 import SettingsIcon from '@mui/icons-material/Settings';
 import './style/header.css';
@@ -12,17 +12,16 @@ function Header() {
 
   return (
     <nav>
-      <div className='link'>
-        <NavLink
-          to="/"
-          className={splitLocation}
-          >
+      <div className="link">
+        <NavLink to="/" className={splitLocation}>
           {back}
         </NavLink>
       </div>
-      <div className='home'>
+
+      <div className="home">
         <h1>Football Leagues</h1>
       </div>
+
       <div>
         <MicIcon />
         <SettingsIcon />
