@@ -1,0 +1,13 @@
+.name {
+  font-size: small;
+}
+
+.city {
+  font-size: smaller;
+}
+
+.team {
+  width: 50%;
+  border: solid 1px black;
+  text-align: center;
+}

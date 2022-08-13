@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 import Team from "./team";
+import './style/leagues.css'
 
 function Leagues (leagues) {
   const leagueList = leagues.leagues;
@@ -25,7 +26,7 @@ function Leagues (leagues) {
         </button>
         ))}
       </div>
-      <div>
+      <div className="teams">
         {teamsList.map((team) => (
           <Team key={team.id} team={team} />
         ))}

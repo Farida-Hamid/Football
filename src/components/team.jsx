@@ -1,28 +1,14 @@
 import { Link } from 'react-router-dom';
-// import PropTypes from 'prop-types';
+import './style/team.css'
 
 function Team ({ team }) {
   return (
-    <Link to="/popup" state={{ team }}>
-      <img  src={team.logo} style={ { width: '150px' } } alt="League logo"/>
-      {team.name} / {team.city}
+    <Link className='team' to="/popup" state={{ team }}>
+      <img  src={team.logo} alt="League logo"/>
+      <h2 className='name'>{team.name}</h2>
+      <p className='city'>{team.city}</p>
     </Link>
   );
 }
-
-// Team.propTypes = {
-//   team: PropTypes.shape({
-//     id: PropTypes.string.isRequired,
-//     name: PropTypes.string.isRequired,
-//     city: PropTypes.string.isRequired,
-//     founded: PropTypes.number.isRequired,
-//     details: PropTypes.string.isRequired,
-//     logo: PropTypes.string.isRequired,
-//   }),
-// };
-
-// Team.defaultProps = {
-//   team: {},
-// };
 
 export default Team;
