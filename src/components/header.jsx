@@ -22,9 +22,9 @@ function Header() {
         </NavLink>
       </div>
       <div className='home'>
-        <img  src={mainLogo} style={ { width: '50px' } } alt="footbal logo"/>
+        <img  src={mainLogo} style={ { width: '40px', height: '30px' } } alt="footbal logo"/>
         <h1>Football Leagues</h1>
-        <img  src={mainLogo} style={ { width: '50px' } } alt="footbal logo"/>
+        <img  src={mainLogo} style={ { width: '40px', height: '30px' } } alt="footbal logo"/>
       </div>
       <MicIcon />
       <SettingsIcon />
